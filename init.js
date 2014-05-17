@@ -1,11 +1,9 @@
 define(function (require, exports, module) {
 
 	//引入依赖
-	var $ = require('jquery');
-	var data = require('data');
-	var css = require('style.css');
+	var css = require('style');
+	var dom = require('dom');
 
-	$('span','.author').html(data.name);
-	$('p','.blog').html(data.content);
-
+	console.log(exports, exports == module.exports, module.id);
+	dom.sendDate();
 });

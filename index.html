@@ -7,7 +7,30 @@
 <body>
 	<div class="author">作者是：<span></span></div>
 	<div class="blog"><p></p></div>
+	<div class="url">require.resolve("style.css") 返回模块的路径: 
+		<span></span>
+	</div>
+	<div class="dep">
+		moudle.denpendecies 返回依赖列表：
+		<span></span>
+	</div>
+	<div class="filname">
+		扩展module方法(extend.js),得到的文件的名字：
+		<span></span>
+	</div>
 
-<script src="sea.js" data-main="init"></script>
+<script src="sea.js" ></script>
 </body>
 </html>
+<script type="text/javascript">
+	seajs.config({
+	    alias: {
+	        'jquery' : 'modules/jquery.js',
+	        'style' : 'modules/css/style.css',
+	        'data' : 'modules/data.js',
+	        'extend' : 'modules/extend.js',
+	        'dom' : 'modules/dom.js'
+	    }
+	});
+	seajs.use('init');
+</script>
